@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<marketlive xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://marketlive.com/integration/xmlbean ../../../../marketlive/dev/tags/Marketlive-16/16.1.0.20/Integration/XMLBeans/schema/MarketLive.xsd"
+    xmlns="http://marketlive.com/integration/xmlbean">
+    <import>
+        <command type="createOrUpdate">
+            <customers xmlns="http://marketlive.com/integration/xmlbean">
+                <customer xmlns="http://marketlive.com/integration/xmlbean">
+                    <code>KIBO_100302</code>
+                    <accountSetCode>SET_A</accountSetCode>
+                    <email>site162customer@mailinator.com</email>
+                    <userName>site162customer@mailinator.com</userName>
+                    <keyCode>20070913163001</keyCode>
+                    <password>P@$$w0rd</password>
+                    <hint>
+                        <code>HINT5</code>
+                        <questionPages>
+                            <questionPage>
+                                <message>What is the year you were born?</message>
+                            </questionPage>
+                        </questionPages>
+                    </hint>
+                    <hintAnswer>2016</hintAnswer>
+                    <guest>false</guest>
+                    <deleted>false</deleted>
+                    <locale>en_US</locale>
+                    <contacts>
+                        <contact>
+                            <code>KIBO_200301</code>
+                            <attributePages>
+                                <attributePage>
+                                    <name>person</name>
+                                    <attributes>
+                                        <firstName>Test</firstName>
+                                        <lastName>Customer</lastName>
+                                    </attributes>
+                                </attributePage>
+                                <attributePage>
+                                    <name>address</name>
+                                    <attributes>
+                                        <street1>717 N Harwood St</street1>
+                                        <postOfficeBox>false</postOfficeBox>
+                                        <city>Dallas</city>
+                                        <state>TX</state>
+                                        <country>US</country>
+                                        <postalCode>75201</postalCode>
+                                    </attributes>
+                                </attributePage>
+                            </attributePages>
+                            <phone1>9725555555</phone1>
+                            <email>site162customer@mailinator.com</email>
+                            <primary>true</primary>
+                            <inAddressBook>true</inAddressBook>
+                            <deleted>false</deleted>
+                        </contact>
+                        <contact>
+                            <code>KIBO_200302</code>
+                            <attributePages>
+                                <attributePage>
+                                    <name>person</name>
+                                    <attributes>
+                                        <firstName>Test</firstName>
+                                        <lastName>Customer</lastName>
+                                    </attributes>
+                                </attributePage>
+                                <attributePage>
+                                    <name>address</name>
+                                    <attributes>
+                                        <street1>825 Buckley Rd</street1>
+                                        <postOfficeBox>false</postOfficeBox>
+                                        <city>San Luis Obispo</city>
+                                        <state>CA</state>
+                                        <country>US</country>
+                                        <postalCode>93401</postalCode>
+                                    </attributes>
+                                </attributePage>
+                            </attributePages>
+                            <phone1>8055555555</phone1>
+                            <primary>false</primary>
+                            <inAddressBook>true</inAddressBook>
+                            <deleted>false</deleted>
+                        </contact>
+                    </contacts>
+                    <customerSiteRecords>
+                        <customerSiteRecord siteCode="site162">
+                            <orderHistoryTotal>105.07</orderHistoryTotal>
+                            <dateLastOrder>2016-10-28T14:35:08.712-05:00</dateLastOrder>
+                            <totalTimeOnSite>396086</totalTimeOnSite>
+                            <totalSessions>0</totalSessions>
+                            <lastTimeOnSite>2016-10-28T14:35:05.013-05:00</lastTimeOnSite>
+                        </customerSiteRecord>
+                    </customerSiteRecords>
+                </customer>
+            </customers>
+        </command>
+    </import>
+</marketlive>

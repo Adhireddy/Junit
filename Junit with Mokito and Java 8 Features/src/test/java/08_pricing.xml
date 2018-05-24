@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<marketlive xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xsi:schemaLocation="http://marketlive.com/integration/xmlbean ../../../../marketlive/dev/tags/Marketlive-16/16.1.0.20/Integration/XMLBeans/schema/MarketLive.xsd"
+ xmlns="http://marketlive.com/integration/xmlbean">
+	<import>
+		<command type="update">
+			<skus>
+				<sku>
+					<code>green-0002-1</code>
+					<prices overwrite="true">
+						<price currency="USD">
+							<regularPrice>22.50</regularPrice>
+							<salePrice>21.00</salePrice>
+							<overweightPrice>0.00</overweightPrice>
+						</price>
+					</prices>
+				</sku>
+                <sku>
+                    <code>purple-0001-1</code>
+                    <prices overwrite="true">
+                        <price currency="USD">
+                            <regularPrice>23.25</regularPrice>
+                            <salePrice>22.10</salePrice>
+                            <overweightPrice>0.00</overweightPrice>
+                        </price>
+                    </prices>
+                </sku>
+                <sku>
+                    <code>taupe-0001-1</code>
+                    <prices overwrite="true">
+                        <price currency="USD">
+                            <regularPrice>24.40</regularPrice>
+                            <salePrice>23.32</salePrice>
+                            <overweightPrice>0.00</overweightPrice>
+                        </price>
+                    </prices>
+                </sku>
+                <sku>
+                    <code>blue-0001-1</code>
+                    <prices overwrite="true">
+                        <price currency="USD">
+                            <regularPrice>19.50</regularPrice>
+                            <salePrice>18.50</salePrice>
+                            <overweightPrice>0.00</overweightPrice>
+                        </price>
+                    </prices>
+                </sku>
+                <sku>
+                    <code>green-0001-1</code>
+                    <prices overwrite="true">
+                        <price currency="USD">
+                            <regularPrice>20.50</regularPrice>
+                            <salePrice>19.50</salePrice>
+                            <overweightPrice>0.00</overweightPrice>
+                        </price>
+                    </prices>
+                </sku>
+                <sku>
+                    <code>orange-0001-1</code>
+                    <prices overwrite="true">
+                        <price currency="USD">
+                            <regularPrice>15.50</regularPrice>
+                            <salePrice>14.50</salePrice>
+                            <overweightPrice>0.00</overweightPrice>
+                        </price>
+                    </prices>
+                </sku>
+                <sku>
+                    <code>red-0001-1</code>
+                    <prices overwrite="true">
+                        <price currency="USD">
+                            <regularPrice>19.50</regularPrice>
+                            <salePrice>18.00</salePrice>
+                            <overweightPrice>0.00</overweightPrice>
+                        </price>
+                    </prices>
+                </sku>
+                <sku>
+                    <code>blue-0002-1</code>
+                    <prices overwrite="true">
+                        <price currency="USD">
+                            <regularPrice>22.75</regularPrice>
+                            <salePrice>21.75</salePrice>
+                            <overweightPrice>0.00</overweightPrice>
+                        </price>
+                    </prices>
+                </sku>
+            </skus>
+		</command>
+	</import>
+</marketlive>

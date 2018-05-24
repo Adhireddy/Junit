@@ -1,0 +1,236 @@
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:batch="http://www.springframework.org/schema/batch"
+	xmlns:jdbc="http://www.springframework.org/schema/jdbc"
+	xmlns:task="http://www.springframework.org/schema/task"
+	
+	xsi:schemaLocation="http://www.springframework.org/schema/beans 
+		http://www.springframework.org/schema/beans/spring-beans-4.0.xsd
+		http://www.springframework.org/schema/batch 
+		http://www.springframework.org/schema/batch/spring-batch-3.0.xsd
+		http://www.springframework.org/schema/jdbc
+		http://www.springframework.org/schema/jdbc/spring-jdbc-3.0.xsd
+    	http://www.springframework.org/schema/context 
+        http://www.springframework.org/schema/context/spring-context-4.0.xsd
+        http://www.springframework.org/schema/task 
+        http://www.springframework.org/schema/task/spring-task-4.0.xsd">
+
+	<context:component-scan base-package="com.kibo.ng.bis" />
+
+	<!-- bean configuration -->
+	<context:annotation-config />
+
+	<bean id="catalogMap" class="java.util.HashMap" scope="prototype" >
+	    <constructor-arg>
+	        <map key-type="java.lang.String" value-type="com.kibo.ng.bis.model.CatalogModel">
+	            <entry key="kibocommercesstore" value-ref="site162Cat" />
+	            <entry key="site162" value-ref="site162Cat" />
+	        </map>
+	    </constructor-arg>
+	</bean>
+	
+	<bean id="site162Cat" class="com.kibo.ng.bis.model.CatalogModel">
+		<property name="siteName" value="site162" />
+		<property name="masterCatalogId" value="1" />
+		<property name="catalogId" value="1" />
+	</bean>
+
+	<bean id="kibocommercesstore" class="com.kibo.ng.bis.model.CatalogModel">
+		<property name="siteName" value="kibocommercesstore" />
+		<property name="masterCatalogId" value="1" />
+		<property name="catalogId" value="1" />
+	</bean>
+	
+	<bean id="site162" class="com.kibo.ng.bis.model.SitesModel">
+		<property name="siteName" value="site162" />
+		<property name="allowIntegration" value="true" />
+		<property name="siteControlFolderPath" value="/marketlive/sites/site162/source/conf/default/system/samples/scenarios/scenario3/control" />
+		<property name="siteCommandFolderPath" value="/marketlive/sites/site162/source/conf/default/system/samples/scenarios/scenario3/command" />
+		<property name="secring" value="/marketlive/services/bis/merchants/site162/working/encrypt/secring.gpg" /> <!-- This secring is used to decrypt NG Data -->
+		<property name="passphrase" value="glowtouch123" /> 
+	</bean>
+
+	<bean id="site161" class="com.kibo.ng.bis.model.SitesModel">
+		<property name="siteName" value="site161" />
+		<property name="allowIntegration" value="true" />
+		<property name="siteControlFolderPath" value="/marketlive/sites/site162/source/conf/default/system/samples/scenarios/scenario5/control" />
+		<property name="siteCommandFolderPath" value="/marketlive/sites/site162/source/conf/default/system/samples/scenarios/scenario5/command" />
+		<property name="secring" value="/marketlive/services/bis/merchants/site162/working/encrypt/secring.gpg" /> <!-- This secring is used to decrypt NG Data -->
+		<property name="passphrase" value="glowtouch123" /> 
+	</bean>
+	
+	<bean id="sitesList" class="java.util.ArrayList">
+		<constructor-arg>
+		<list>
+			<ref bean="site162"/>
+			<!-- <ref bean="site161"/> -->
+			
+		</list>
+		</constructor-arg>
+	</bean>
+	
+	<bean id="sftpMap" class="java.util.HashMap" scope="prototype" >
+	    <constructor-arg>
+	        <map key-type="java.lang.String" value-type="com.kibo.ng.bis.model.SftpCredentialsModel">
+	            <entry key="ftpPOConfiguration" value-ref="ftpPOConfiguration" />
+	            <entry key="prePostFtpCommandProcess" value-ref="prePostFtpCommandProcess" />
+	            <entry key="prePostFtpCommandProcess1" value-ref="prePostFtpCommandProcess1" />
+	        </map>
+	    </constructor-arg>
+	</bean>
+
+	<bean id="ftpPOConfiguration" class="com.kibo.ng.bis.model.SftpCredentialsModel">
+		<property name="isDefault" value="true" />
+		<property name="ipAddress" value="192.168.9.212" />
+		<property name="userName" value="root" />
+		<property name="password" value="glowtech" />
+		<property name="port" value="8904" />
+		<property name="sftpExportPath" value="/root/marketlive/sites/site162/source/conf/default/system/samples/exportfiles" />
+		<property name="sftpImportPath" value="/root/marketlive/sites/site162/source/conf/default/system/samples/import/commandfiles" />
+	</bean>
+	
+	<bean id="prePostFtpCommandProcess" class="com.kibo.ng.bis.model.SftpCredentialsModel">
+		<property name="ipAddress" value="192.168.9.212" />
+		<property name="userName" value="root" />
+		<property name="password" value="glowtech" />
+		<property name="port" value="8904" />
+		<property name="sftpExportPath" value="/root/marketlive/sites/site162/source/conf/default/system/samples/exportfiles" />
+		<property name="sftpImportPath" value="/root/marketlive/sites/site162/source/conf/default/system/samples/import/commandfiles" />
+	</bean>
+	
+	<bean id="prePostFtpCommandProcess1" class="com.kibo.ng.bis.model.SftpCredentialsModel">
+		<property name="ipAddress" value="192.168.9.212" />
+		<property name="userName" value="root" />
+		<property name="password" value="glowtech" />
+		<property name="port" value="8904" />
+		<property name="sftpExportPath" value="/root/marketlive/sites/site162/source/conf/default/system/samples/exportfiles" />
+		<property name="sftpImportPath" value="/root/marketlive/sites/site162/source/conf/default/system/samples/import/commandfiles" />
+	</bean>
+	
+	<bean id="configMap" class="java.util.HashMap" scope="prototype" >
+	    <constructor-arg>
+	        <map key-type="java.lang.String" value-type="com.kibo.ng.bis.model.ConfigModel">
+	            <entry key="stgv162" value-ref="stgv162" />
+	            <entry key="production" value-ref="production" />
+	            <entry key="prdv162" value-ref="prdv162" />
+	        </map>
+	    </constructor-arg>
+	</bean>
+	
+	<bean id="stgv162" class="com.kibo.ng.bis.model.ConfigModel">
+		<property name="environment" value="stgv162" />
+		<property name="tenantId" value="18695" />
+		<property name="siteId" value="28997" />
+		<property name="appId" value="KiboMigrations.mycompany_helloworld.1.0.0.Release" />
+		<property name="sharedSecret" value="550efb6b98f24abcba1626b99a3a42a0" />
+		<property name="secring" value="/marketlive/services/bis/merchants/site162/working/encrypt/secring.pgp" />
+		<property name="passphrase" value="glowtouch123" />
+	</bean>
+	
+	<bean id="production" class="com.kibo.ng.bis.model.ConfigModel">
+		<property name="environment" value="production" />
+		<property name="tenantId" value="22900" />
+		<property name="siteId" value="33388" />
+		<property name="appId" value="KMig.MLBaseActions.1.0.0.Release" />
+		<property name="sharedSecret" value="3e9d1df7af124065ad6f1e3fdf2c1fa4" />
+		<property name="secring" value="/marketlive/services/bis/merchants/site162/working/encrypt/secring.pgp" /> <!-- This secring is used to decrypt NG Data -->
+		<property name="passphrase" value="glowtouch123" /> 
+	</bean>
+	
+	<bean id="prdv162" class="com.kibo.ng.bis.model.ConfigModel">
+		<property name="environment" value="prdv162" />
+		<property name="tenantId" value="22900" />
+		<property name="siteId" value="33388" />
+		<property name="appId" value="KMig.MLBaseActions.1.0.0.Release" />
+		<property name="sharedSecret" value="3e9d1df7af124065ad6f1e3fdf2c1fa4" />
+		<property name="secring" value="/marketlive/services/bis/merchants/site162/working/encrypt/secring.pgp" />
+		<property name="passphrase" value="glowtouch123" />
+	</bean>
+	
+
+	<!-- scheduler 0/5 * * * * ?,0 0/2 * * * ?-->
+<!-- 	<task:scheduled-tasks scheduler="kiboScheduler">
+		<task:scheduled ref="integrationscheduler" method="process"
+			cron="0 0/2 * * * ?" />
+	   </task:scheduled-tasks>
+
+	<task:scheduler id="kiboScheduler" /> -->
+
+	<!-- properties file configuration -->
+	<bean id="appProperties"
+		class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
+		<property name="locations">
+			<list>
+				<value>classpath:mail.properties</value>
+				<value>classpath:config.properties</value>
+				<value>classpath:sftp.properties</value>
+				<value>classpath:test-config.properties</value>
+			</list>
+		</property>
+	</bean>
+
+	<!-- Email service -->
+	<bean id="mailSender" class="org.springframework.mail.javamail.JavaMailSenderImpl">
+		<property name="host" value="mail.glowtouch.com" />
+		<property name="port" value="143" />
+		<property name="username" value="shankaranarayana.s@glowtouch.com" />
+		<property name="password" value="sharma138" />
+
+		<property name="javaMailProperties">
+			<props>
+				<prop key="mail.smtp.auth">true</prop>
+				<prop key="mail.smtp.starttls.enable">true</prop>
+			</props>
+		</property>
+	</bean>
+
+	<bean id="fieldMap" class="java.util.HashMap" scope="prototype" >
+	    <constructor-arg>
+	        <map key-type="java.lang.String" value-type="java.lang.String">
+	            <entry key="Product.dateModified" value="auditInfo.updateDate" />
+	            <entry key="Product.deleted" value="SKIP" />
+	            <entry key="Product.active" value="productInCatalogs.isActive" />
+	            
+	            <entry key="Sku.deleted" value="SKIP" />
+	            <entry key="Sku.active" value="productInCatalogs.isActive" />
+	            <entry key="Sku.dateDeactivate" value="productInCatalogs.activeDateRange.endDate" />
+	            
+	            <entry key="PriceList.dateModified" value="auditInfo.updateDate" />
+	            
+	            <entry key="Category.dateModified" value="auditInfo.updateDate" />
+	            <entry key="Category.active" value="isActive" />
+	            <entry key="Category.categoryType" value="isDisplayed" />
+	            
+	            <entry key="Orders.dateOrdered" value="submittedDate" />
+	            
+	            <entry key="Inventory.deleted" value="SKIP" />
+	            <entry key="Inventory.inventorySet" value="SKIP" />
+	            <entry key="Inventory.dateModified" value="auditInfo.updateDate" />
+	            
+				<entry key="Customer.dateModified" value="auditInfo.updateDate" />
+		
+	        </map>
+	    </constructor-arg>
+	</bean>
+	
+	<bean id="criteriaMap" class="java.util.HashMap" scope="prototype" >
+	    <constructor-arg>
+	        <map key-type="java.lang.String" value-type="java.lang.String">
+	            <entry key="Category.categoryType.1" value="true" />
+	            <entry key="Category.categoryType.2" value="false" />
+	            
+	            <entry key="Product.deleted.true" value="true" />
+	            <entry key="Product.deleted.false" value="false" />
+	        </map>
+	    </constructor-arg>
+	</bean>
+	
+	<bean id="orderByMap" class="java.util.HashMap" scope="prototype" >
+	    <constructor-arg>
+	        <map key-type="java.lang.String" value-type="java.lang.String">
+	            <entry key="Category.pk" value="id" />
+	            <entry key="PriceList.pk" value="rank" />
+	        </map>
+	    </constructor-arg>
+	</bean>
+</beans>

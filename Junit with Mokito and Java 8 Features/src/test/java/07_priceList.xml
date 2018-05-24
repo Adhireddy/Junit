@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<marketlive xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://marketlive.com/integration/xmlbean ../../../../marketlive/dev/tags/Marketlive-16/16.1.0.20/Integration/XMLBeans/schema/MarketLive.xsd"
+    xmlns="http://marketlive.com/integration/xmlbean">
+    <import>
+        <command type="createOrUpdate">
+            <priceLists xmlns="http://marketlive.com/integration/xmlbean">
+                <priceList>
+                    <code>PL001</code>
+                    <name>Unit Test PriceList</name>
+                    <description>Unit Test PriceList</description>
+                    <priceListItems>
+                        <priceListItem xmlns="http://marketlive.com/integration/xmlbean">
+                            <code>PLI009</code>
+                            <skuCode>PLDSKU01</skuCode>
+                            <qty>1</qty>
+                            <amount>35.00</amount>
+                        </priceListItem>
+                        <priceListItem xmlns="http://marketlive.com/integration/xmlbean">
+                            <code>PLI011</code>
+                            <skuCode>PLDSKU01</skuCode>
+                            <qty>5</qty>
+                            <amount>33.00</amount>
+                        </priceListItem>
+                        <priceListItem xmlns="http://marketlive.com/integration/xmlbean">
+                            <code>PLI012</code>
+                            <skuCode>PLDSKU01</skuCode>
+                            <qty>10</qty>
+                            <amount>31.00</amount>
+                        </priceListItem>
+                        <priceListItem xmlns="http://marketlive.com/integration/xmlbean">
+                            <code>PLI013</code>
+                            <skuCode>PLDSKU02</skuCode>
+                            <qty>1</qty>
+                            <amount>35.50</amount>
+                        </priceListItem>
+                    </priceListItems>
+                    <sites>
+                        <siteCode>site162</siteCode>
+                    </sites>
+                    <currency>USD</currency>
+                </priceList>
+                <priceList>
+                    <code>PL003</code>
+                    <name>140B</name>
+                    <description>Stress Coat 16oz (Treats 1920 gal.)</description>
+                    <priceListItems>
+                        <priceListItem xmlns="http://marketlive.com/integration/xmlbean">
+                            <code>PLI030</code>
+                            <productCode>140B</productCode>
+                            <qty>2</qty>
+                            <amount>9.00</amount>
+                        </priceListItem>
+                        <priceListItem xmlns="http://marketlive.com/integration/xmlbean">
+                            <code>PLI031</code>
+                            <productCode>140B</productCode>
+                            <qty>4</qty>
+                            <amount>7.00</amount>
+                        </priceListItem>
+                        <priceListItem xmlns="http://marketlive.com/integration/xmlbean">
+                            <code>PLI032</code>
+                            <productCode>140B</productCode>
+                            <qty>6</qty>
+                            <amount>5.00</amount>
+                        </priceListItem>
+                    </priceListItems>
+                    <sites>
+                        <siteCode>site162</siteCode>
+                    </sites>
+                    <currency>USD</currency>
+                </priceList>
+                <priceList>
+                    <code>PL004</code>
+                    <name>Sale PriceList 1</name>
+                    <description>Sale Pricelist 1</description>
+                    <priceListItems>
+                        <priceListItem xmlns="http://marketlive.com/integration/xmlbean">
+                            <code>PLI145</code>
+                            <skuCode>PLDSKU07</skuCode>
+                            <qty>3</qty>
+                            <amount>49.00</amount>
+                        </priceListItem>
+                        <priceListItem xmlns="http://marketlive.com/integration/xmlbean">
+                            <code>PLI146</code>
+                            <skuCode>PLDSKU07</skuCode>
+                            <qty>6</qty>
+                            <amount>48.00</amount>
+                        </priceListItem>
+                        <priceListItem xmlns="http://marketlive.com/integration/xmlbean">
+                            <code>PLI147</code>
+                            <skuCode>PLDSKU07</skuCode>
+                            <qty>9</qty>
+                            <amount>47.00</amount>
+                        </priceListItem>
+                        <priceListItem xmlns="http://marketlive.com/integration/xmlbean">
+                            <code>PLI148</code>
+                            <skuCode>PLDSKU07</skuCode>
+                            <qty>12</qty>
+                            <amount>46.00</amount>
+                        </priceListItem>
+                    </priceListItems>
+                    <sites>
+                        <siteCode>site162</siteCode>
+                    </sites>
+                    <currency>USD</currency>
+                </priceList>
+            </priceLists>
+        </command>
+    </import>
+</marketlive>

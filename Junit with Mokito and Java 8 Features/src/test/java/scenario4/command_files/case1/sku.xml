@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<marketlive xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://marketlive.com/integration/xmlbean http://localhost:8802/IntegrationWS/schema/MarketLive.xsd"
+    xmlns="http://marketlive.com/integration/xmlbean">
+    <import>
+        <command type="createOrUpdate">
+            <skus xmlns="http://marketlive.com/integration/xmlbean">
+                <sku>
+                    <code>CC011</code>
+                    <attributePages>
+                        <attributePage>
+                            <name>assignedAttributePage</name>
+                            <attributes>
+                                <name>UPC Code</name>
+                                <value>CC011_UPC</value>
+                            </attributes>
+                        </attributePage>
+                    </attributePages>
+                    <skuTypeId>1</skuTypeId>
+                    <skuTypeIdAsString>STANDARD</skuTypeIdAsString>
+                    <statusCode>1</statusCode>
+                    <active>true</active>
+                    <taxable>true</taxable>
+                    <shippingChargeable>true</shippingChargeable>
+                    <weight>0.0</weight>
+                    <deleted>false</deleted>
+                    <dateActivate>2005-05-26T14:12:00.000-07:00</dateActivate>
+                    <dateDeactivate>2025-05-26T14:12:00.000-07:00</dateDeactivate>
+                    <overWeight>false</overWeight>
+                    <giftWrap>false</giftWrap>
+                    <productSkuLinks>
+                        <productSkuLink>
+                            <productCode>CC011</productCode>
+                            <defaultProduct>true</defaultProduct>
+                        </productSkuLink>
+                    </productSkuLinks>
+                    <inventories>
+                        <inventory>
+                            <code>CC011</code>
+                            <deleted>false</deleted>
+                            <ordinal>0</ordinal>
+                            <dateRestock>2017-08-30T15:53:03.000-07:00</dateRestock>
+                            <stock>35</stock>
+                            <minStock>1</minStock>
+                            <inventorySetCode>b2b_kibocommercestore</inventorySetCode>
+                        </inventory>
+                        <inventory>
+                            <code>CC011</code>
+                            <deleted>false</deleted>
+                            <ordinal>0</ordinal>
+                            <dateRestock>2017-08-30T15:52:01.000-07:00</dateRestock>
+                            <stock>319</stock>
+                            <minStock>2</minStock>
+                            <inventorySetCode>OMS_DC_kibocommercestore</inventorySetCode>
+                        </inventory>
+                    </inventories>
+                    <prices>
+                        <price currency="USD">
+                            <regularPrice>345.00</regularPrice>
+                            <salePrice>0.00</salePrice>
+                            <overweightPrice>0.00</overweightPrice>
+                        </price>
+                    </prices>
+                </sku>
+               
+               
+                <sku>
+                    <code>CC007</code>
+                    <attributePages>
+                        <attributePage>
+                            <name>assignedAttributePage</name>
+                            <attributes>
+                                <name>UPC Code</name>
+                                <value>CC007_UPC</value>
+                            </attributes>
+                        </attributePage>
+                    </attributePages>
+                    <skuTypeId>1</skuTypeId>
+                    <skuTypeIdAsString>STANDARD</skuTypeIdAsString>
+                    <statusCode>1</statusCode>
+                    <active>true</active>
+                    <taxable>true</taxable>
+                    <shippingChargeable>true</shippingChargeable>
+                    <weight>0.0</weight>
+                    <deleted>false</deleted>
+                    <dateActivate>2005-05-26T14:12:30.000-07:00</dateActivate>
+                    <dateDeactivate>2025-05-26T14:12:30.000-07:00</dateDeactivate>
+                    <overWeight>false</overWeight>
+                    <giftWrap>false</giftWrap>
+                    <productSkuLinks>
+                        <productSkuLink>
+                            <productCode>CC007</productCode>
+                            <defaultProduct>true</defaultProduct>
+                        </productSkuLink>
+                    </productSkuLinks>
+                    <inventories>
+                        <inventory>
+                            <code>CC007</code>
+                            <deleted>false</deleted>
+                            <ordinal>0</ordinal>
+                            <dateRestock>2017-08-30T15:52:01.000-07:00</dateRestock>
+                            <stock>784</stock>
+                            <minStock>2</minStock>
+                            <inventorySetCode>OMS_DC_kibocommercestore</inventorySetCode>
+                        </inventory>
+                        <inventory>
+                            <code>CC007</code>
+                            <deleted>false</deleted>
+                            <ordinal>0</ordinal>
+                            <dateRestock>2017-08-30T15:53:03.000-07:00</dateRestock>
+                            <stock>440</stock>
+                            <minStock>2</minStock>
+                            <inventorySetCode>b2b_kibocommercestore</inventorySetCode>
+                        </inventory>
+                    </inventories>
+                    <prices>
+                        <price currency="USD">
+                            <regularPrice>20.29</regularPrice>
+                            <salePrice>0.00</salePrice>
+                            <overweightPrice>0.00</overweightPrice>
+                        </price>
+                    </prices>
+                </sku>
+            </skus>
+        </command>
+    </import>
+</marketlive>

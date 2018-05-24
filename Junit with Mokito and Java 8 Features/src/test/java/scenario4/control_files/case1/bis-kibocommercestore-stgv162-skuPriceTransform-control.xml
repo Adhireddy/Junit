@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<batchIntegrationRequest xmlns="http://batchIntegrationRequest.bis.jbi.marketlive.com">
+  <requestId>SkuPriceImport</requestId>
+  <comment>Sku Price Import</comment>
+  <merchant>
+    <code>kibocommercestore</code>
+    <site>
+      <code>kibocommercestore</code>
+      <environment>stgv162</environment>
+      <integrationWebService>
+        <url>http://localhost:8802/IntegrationWS/IntegrationWSService</url>
+        <commandFiles>
+          <file>
+            <name>sku.xml</name>
+            <seqNum>1</seqNum>
+            <encryptionRequested>false</encryptionRequested>
+            <inputXSLTFileName/>
+            <outputXSLTFileName/>
+          </file>
+          <file>
+            <name>skuPrice.csv</name>
+            <seqNum>2</seqNum>
+            <encryptionRequested>false</encryptionRequested>
+            <inputXSLTFileName>skuPrice.xsl</inputXSLTFileName>
+            <outputXSLTFileName/>
+          </file>
+        </commandFiles>
+      </integrationWebService>
+      <fileEncryption>
+        <publicKeyFile>test-pubring.pgp</publicKeyFile>
+        <outputFileExtension>pgp</outputFileExtension>
+        <asciiFormatEncoding>true</asciiFormatEncoding>
+      </fileEncryption>
+      <emailNotification>
+        <enabled>true</enabled>
+        <to>clientBatchNotifyAlias@marketlive.com</to>
+        <cc>cc@merchantemail.com</cc>
+        <bcc>bcc@merchantemail.com</bcc>
+      </emailNotification>
+    </site>
+  </merchant>
+</batchIntegrationRequest>

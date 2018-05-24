@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<marketlive xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://marketlive.com/integration/xmlbean ../../../../marketlive/dev/tags/Marketlive-16/16.1.0.20/Integration/XMLBeans/schema/MarketLive.xsd"
+    xmlns="http://marketlive.com/integration/xmlbean">
+    <import>
+        <command type="update">
+            <inventories xmlns="http://marketlive.com/integration/xmlbean">
+                <inventory>
+                    <code>green-0002-1-SC1</code>
+                    <ordinal>0</ordinal>
+                    <stock>999</stock>
+                    <minStock>0</minStock>
+                    <skuCode>green-0002-1</skuCode>
+                    <inventorySetCode>AUS2</inventorySetCode>
+                </inventory>
+                <inventory>
+                    <code>green-0002-1</code>
+                    <ordinal>0</ordinal>
+                    <stock>20</stock>
+                    <minStock>0</minStock>
+                    <skuCode>green-0002-1</skuCode>
+                    <inventorySetCode>SET_A</inventorySetCode>
+                </inventory>
+            </inventories>
+        </command>
+		<command type="insert">
+            <inventories xmlns="http://marketlive.com/integration/xmlbean">
+                <inventory>
+                    <code>green-0002-1-SC1</code>
+                    <ordinal>0</ordinal>
+                    <stock>999</stock>
+                    <minStock>0</minStock>
+                    <skuCode>green-0002-1</skuCode>
+                    <inventorySetCode>SET_SC1</inventorySetCode>
+                </inventory>
+                <inventory>
+                    <code>green-0002-1</code>
+                    <ordinal>0</ordinal>
+                    <stock>20</stock>
+                    <minStock>0</minStock>
+                    <skuCode>green-0002-1</skuCode>
+                    <inventorySetCode>SET_A</inventorySetCode>
+                </inventory>
+            </inventories>
+        </command>
+    </import>
+</marketlive>

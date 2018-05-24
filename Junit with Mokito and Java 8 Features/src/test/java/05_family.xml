@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<marketlive xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xsi:schemaLocation="http://marketlive.com/integration/xmlbean ../../../../marketlive/dev/tags/Marketlive-16/16.1.0.20/Integration/XMLBeans/schema/MarketLive.xsd"
+ xmlns="http://marketlive.com/integration/xmlbean">
+    <import>
+        <command type="createOrUpdate">
+            <families>
+                <family>
+                    <code>FamilyCode</code>
+                    <active>true</active>
+                    <dateActivate>2006-10-12T14:59:00.000-05:00</dateActivate>
+                    <dateDeactivate>2112-10-12T14:59:00.000-05:00</dateDeactivate>
+                    <descriptionPages>
+                        <descriptionPage locale="en_US">
+                            <siteDescriptions>
+                                <siteDescription siteCode="site162">
+                                    <name>Family Name</name>
+                                    <keywords>Family Keywords</keywords>
+                                    <short>Family short description</short>
+                                    <long>A long fluid description of the family</long>
+                                </siteDescription>
+                            </siteDescriptions>
+                        </descriptionPage>
+                    </descriptionPages>
+                    <imageTargetPages>
+                        <imageTargetPage locale="en_US">
+                            <siteImageTargets>
+                                <siteImageTarget siteCode="site162">
+                                    <zoom1Image>/source/familyCode.jpg</zoom1Image>
+                                </siteImageTarget>
+                            </siteImageTargets>
+                        </imageTargetPage>
+                    </imageTargetPages>
+                    <familyProductLinks>
+                        <familyProductLink>
+                            <productCode>TSHIRT000A</productCode>
+                            <leader>true</leader>
+                        </familyProductLink>
+                        <familyProductLink>
+                            <productCode>50707</productCode>
+                            <leader>false</leader>
+                        </familyProductLink>
+                        <familyProductLink>
+                            <productCode>50750</productCode>
+                            <leader>false</leader>
+                        </familyProductLink>
+                    </familyProductLinks>
+                </family>
+            </families>
+        </command>
+    </import>
+</marketlive>

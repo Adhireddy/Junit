@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<marketlive xmlns="http://marketlive.com/integration/xmlbean">
+    <import>
+		<command type="createOrUpdate">
+			<commandProcessors>
+				<commandProcessor>				
+					<code>ftpPOConfiguration</code>				
+					<beanName>prePostFtpCommandProcess</beanName>
+					<processType>FTP</processType>					
+				</commandProcessor>
+			</commandProcessors>
+		</command>
+	</import>
+</marketlive>

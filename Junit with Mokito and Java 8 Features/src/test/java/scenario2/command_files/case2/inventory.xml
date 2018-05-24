@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<marketlive xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://marketlive.com/integration/xmlbean http://localhost:8802/IntegrationWS/schema/MarketLive.xsd"
+    xmlns="http://marketlive.com/integration/xmlbean">
+    <import>
+        <command type="update">
+            <inventories xmlns="http://marketlive.com/integration/xmlbean">
+                <inventory pk="101248">
+                    <!-- pk is ignored for an import.  It is the primary key id of the entity.  When EXPORTED we send it. -->
+                    <code>uv-20watt</code>
+                    <!-- this should be the code for he sku.  In marketlive, if a product has only one sku it is often the same value as the product.  look for a variant product code with this code and ifyou can't find a variant, look for a product, if you can't find a product throw an error where appropriate . -->
+                    <ordinal>0</ordinal>
+                    <!-- ignored in NG -->
+                    <dateRestock>2017-08-30T15:53:03.000-07:00</dateRestock>
+                    <!-- On the ng admin product, under manage inventory "if out of stock" question:  When this date is in the future, allow backorder, in the past, show out of stock message-->
+                    <stock>961</stock>
+                    <!-- On hand under location inventory -->
+                    <minStock>2</minStock>
+                    <!-- Ignore -->
+                    <inventorySetCode>b2b_kibocommercestore</inventorySetCode>
+                    <!-- Location to where the inventory -->
+                </inventory>
+                <inventory>
+                    <code>W563587041</code>
+                    <ordinal>0</ordinal>
+                    <dateRestock>2017-08-30T15:53:03.000-07:00</dateRestock>
+                    <stock>715</stock>
+                    <minStock>2</minStock>
+                    <skuCode>W563587041</skuCode>
+                    <inventorySetCode>b2b_kibocommercestore</inventorySetCode>
+                </inventory>
+                <inventory>
+                    <code>W563587063</code>
+                    <ordinal>0</ordinal>
+                    <dateRestock>2017-08-30T15:53:03.000-07:00</dateRestock>
+                    <stock>-55</stock>
+                    <minStock>4</minStock>
+                    <skuCode>W563587063</skuCode>
+                    <inventorySetCode>b2b_kibocommercestore</inventorySetCode>
+                </inventory>
+              
+				  </inventories>
+        </command>
+    </import>
+</marketlive>

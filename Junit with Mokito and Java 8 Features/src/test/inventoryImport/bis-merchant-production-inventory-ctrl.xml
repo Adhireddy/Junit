@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<batchIntegrationRequest xmlns="http://batchIntegrationRequest.bis.jbi.marketlive.com">
+  <!-- USE FILE NAME FRIENDLY NAMES : no spaces or special characters 	-->
+  <requestId>InventoryImport</requestId>
+  <comment>Comment is for client use only</comment>
+  <merchant>
+    <code>[merchant-name]</code>
+    <site>
+      <code>[merchant-name]</code>
+      <environment>production</environment>
+      <integrationWebService>
+        <url>http://localhost:8802/IntegrationWS/IntegrationWSService</url>
+        <commandFiles>
+          <file>
+            <name>inventory.xml</name>
+            <seqNum>1</seqNum>
+            <encryptionRequested>false</encryptionRequested>
+            <inputXSLTFileName/>
+            <outputXSLTFileName/>
+          </file>
+        </commandFiles>
+      </integrationWebService>
+      <fileEncryption>
+        <!-- Leave this entry even when the process is not to use encryption, BIS needs to have a valid pgp key that exist in the file system-->
+        <publicKeyFile>test-pubring.pgp</publicKeyFile>
+        <outputFileExtension>pgp</outputFileExtension>
+        <asciiFormatEncoding>true</asciiFormatEncoding>
+      </fileEncryption>
+      <emailNotification>
+        <enabled>true</enabled>
+        <to>clientBatchNotifyAlias@marketlive.com</to>
+        <cc>cc@merchantemail.com</cc>
+        <bcc>bcc@merchantemail.com</bcc>
+      </emailNotification>
+    </site>
+  </merchant>
+</batchIntegrationRequest>

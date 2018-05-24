@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<marketlive xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://marketlive.com/integration/xmlbean http://localhost:8802/IntegrationWS/schema/MarketLive.xsd"
+    xmlns="http://marketlive.com/integration/xmlbean">
+    <export>
+        <command type="findByCriteria">
+            <findByCriteriaParameters>
+                <entityType>order</entityType>
+                <locale>en_US</locale>
+                <hql>from Order p where p.dateModified > sysdate-100</hql>
+            </findByCriteriaParameters>
+        </command>
+    </export>
+</marketlive>

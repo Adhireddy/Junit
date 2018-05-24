@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<marketlive xmlns="http://marketlive.com/integration/xmlbean" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://marketlive.com/integration/xmlbean ..\..\schema\MarketLive.xsd">
+	<import>
+		<command type="createOrUpdate">
+			<optionTypes>
+				<optionType>
+					<code>SHIRT_COLOR</code>
+					<ordinal>1</ordinal>
+					<active>true</active>
+					<swatchEnabled>true</swatchEnabled>
+					<descriptionPages>
+						<descriptionPage locale="en_US">
+							<name>[en_US]Shirt Color[en_US]</name>
+						</descriptionPage>
+					</descriptionPages>
+					<displayPages>
+						<displayPage locale="en_US">
+							<selectPrompt>[en_US]Select a Shirt Color[en_US]</selectPrompt>
+							<swatchHeader>[en_US]Available Shirt Colors:[en_US]</swatchHeader>
+						</displayPage>
+					</displayPages>
+				</optionType>
+			</optionTypes>
+		</command>
+	</import>
+</marketlive>

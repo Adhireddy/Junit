@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<marketlive xmlns="http://marketlive.com/integration/xmlbean" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://marketlive.com/integration/xmlbean ..\..\schema\MarketLive.xsd">
+	<import>
+		<command type="createOrUpdate">
+			<!-- options -->
+			<options>
+				<option>
+					<code>Blue</code>
+					<ordinal>1</ordinal>
+					<image>/products/en_us/swatches/SHIRT_COLOR_blue_sw.jpg</image>
+					<optionTypeCode>SHIRT_COLOR</optionTypeCode>
+					<descriptionPages>
+						<descriptionPage locale="en_US">
+							<name>[en_US]Blue[en_US]</name>
+						</descriptionPage>
+					</descriptionPages>
+				</option>
+                <option>
+                    <code>Green</code>
+                    <ordinal>2</ordinal>
+                    <image>/products/en_us/swatches/SHIRT_COLOR_green_sw.jpg</image>
+                    <optionTypeCode>SHIRT_COLOR</optionTypeCode>
+                    <descriptionPages>
+                        <descriptionPage locale="en_US">
+                            <name>[en_US]Green[en_US]</name>
+                        </descriptionPage>
+                    </descriptionPages>
+                </option>
+                <option>
+                    <code>Orange</code>
+                    <ordinal>3</ordinal>
+                    <image>/products/en_us/swatches/SHIRT_COLOR_orange_sw.jpg</image>
+                    <optionTypeCode>SHIRT_COLOR</optionTypeCode>
+                    <descriptionPages>
+                        <descriptionPage locale="en_US">
+                            <name>[en_US]Orange[en_US]</name>
+                        </descriptionPage>
+                    </descriptionPages>
+                </option>
+         
+            </options>
+		</command>
+	</import>
+</marketlive>

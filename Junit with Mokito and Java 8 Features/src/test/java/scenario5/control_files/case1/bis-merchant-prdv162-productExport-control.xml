@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<batchIntegrationRequest xmlns="http://batchIntegrationRequest.bis.jbi.marketlive.com">
+    <requestId>ProductExport</requestId>
+    <comment>Exports all producst modified in the last 24 hours</comment>
+    <merchant>
+        <code>kibocommercestore</code>
+        <site>
+            <code>kibocommercestor</code>
+            <environment>prdv162</environment>
+            <integrationWebService>
+                <url>http://localhost:8802/IntegrationWS/IntegrationWSService</url>
+                <commandFiles>
+                    <file>
+                        <name>prdv162-productExport-command.xml</name>
+                        <seqNum>1</seqNum>
+                        <encryptionRequested>false</encryptionRequested>
+                        <inputXSLTFileName></inputXSLTFileName>
+                        <outputXSLTFileName></outputXSLTFileName>
+                    </file>
+                    <file>
+                        <name>prdv162-productExportSftp-command.xml</name>
+                        <seqNum>1</seqNum>
+                        <encryptionRequested>false</encryptionRequested>
+                        <inputXSLTFileName></inputXSLTFileName>
+                        <outputXSLTFileName></outputXSLTFileName>
+                    </file>
+                </commandFiles>
+            </integrationWebService>
+            <fileEncryption>
+                <publicKeyFile>test-pubring.pgp</publicKeyFile>
+                <outputFileExtension>pgp</outputFileExtension>
+                <asciiFormatEncoding>false</asciiFormatEncoding>
+            </fileEncryption>
+            <emailNotification>
+                <enabled>true</enabled>
+                <to>marketlive@marketlive.com</to>
+                <cc></cc>
+                <bcc></bcc>
+            </emailNotification>
+        </site>
+    </merchant>
+</batchIntegrationRequest>

@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<marketlive xmlns="http://marketlive.com/integration/xmlbean" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://marketlive.com/integration/xmlbean ..\..\schema\MarketLive.xsd">
+    <import>
+        <command type="createOrUpdate">
+            <categories xmlns="http://marketlive.com/integration/xmlbean">
+                <category pk="4" xmlns="http://marketlive.com/integration/xmlbean">
+                    <code>Category 1</code>
+                    <attributePages>
+                        <attributePage>
+                            <name>assignedAttributePage</name>
+                            <attributes>
+                                <name>DHTML Menu Footer</name>
+                                <value><![CDATA[<table width='100%' cellpadding=0 cellspacing=0><tr><td><a href='#'>Category Level Fillslot</a></td><td><a href='#'>Category Level Fillslot</a></td></tr></table>]]></value>
+                            </attributes>
+                        </attributePage>
+                    </attributePages>
+                    <active>true</active>
+                    <deleted>false</deleted>
+                    <categoryType>1</categoryType>
+                    <categoryTypeAsString>Product Category</categoryTypeAsString>
+                    <completeURL>https://www.LocalHost.com/category/%5Ben_us%5Dcategory1%5Ben_us%5D.do</completeURL>
+                    <gatewayHeaderURL>https://www.LocalHost.com/images//set_a/en_us/local/headers/main/cat01_gate_mhd.gif</gatewayHeaderURL>
+                    <directoryHeaderURL>https://www.LocalHost.com/images//set_a/en_us/local/headers/main/cat01_dir_mhd.gif</directoryHeaderURL>
+                    <explodable>false</explodable>
+                    <searchEngineSupportPages>
+                        <searchEngineSupportPage locale="en_US">
+                            <urlValue>[en_US]category1[en_US]</urlValue>
+                            <title>[en_US]Category 1 Title[en_US]</title>
+                            <metaDescription>[en_US]Category 1 Gateway[en_US]</metaDescription>
+                            <metaKeywords>[en_US]category,gateway[en_US]</metaKeywords>
+                        </searchEngineSupportPage>
+                    </searchEngineSupportPages>
+                    <imagePages>
+                        <imagePage locale="en_US">
+                            <navigateOff>/set_a/en_us/global/globalnav/globalnav01_off.gif</navigateOff>
+                            <navigateOn>/set_a/en_us/global/globalnav/globalnav01_on.gif</navigateOn>
+                            <directoryHeader>/set_a/en_us/local/headers/main/cat01_dir_mhd.gif</directoryHeader>
+                            <gatewayHeader>/set_a/en_us/local/headers/main/cat01_gate_mhd.gif</gatewayHeader>
+                        </imagePage>
+                    </imagePages>
+                    <parentCategoryLinks>
+                        <parentCategoryLink>
+                            <parentCode>Product Categories</parentCode>
+                            <parentId>2</parentId>
+                            <childCode>Category 1</childCode>
+                            <childId>4</childId>
+                            <ordinal>0</ordinal>
+                            <defaultParent>true</defaultParent>
+                        </parentCategoryLink>
+                    </parentCategoryLinks>
+                    <childCategoryLinks>
+                        <childCategoryLink>
+                            <parentCode>Category 1</parentCode>
+                            <childCode>C1-Sub Category 8</childCode>
+                            <ordinal>7</ordinal>
+                            <defaultParent>true</defaultParent>
+                        </childCategoryLink>
+                        <childCategoryLink>
+                            <parentCode>Category 1</parentCode>
+                            <childCode>C1-Sub Category 9</childCode>
+                            <ordinal>8</ordinal>
+                            <defaultParent>true</defaultParent>
+                        </childCategoryLink>
+                    </childCategoryLinks>
+                </category>
+            </categories>
+        </command>
+    </import>
+</marketlive>

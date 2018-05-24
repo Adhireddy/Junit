@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<marketlive xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://marketlive.com/integration/xmlbean ../../../../marketlive/dev/tags/Marketlive-16/16.1.0.20/Integration/XMLBeans/schema/MarketLive.xsd"
+	xmlns="http://marketlive.com/integration/xmlbean">
+	<import>
+		<command type="createOrUpdate">
+			<orders>
+				<order>
+					<code>KIBO_100302</code>
+					<siteCode>site162</siteCode>
+					<locale>en_US</locale>
+					<customerCode>KIBO_100302</customerCode>
+					<status>Partially Fulfilled</status>
+					<shipments>
+						<orderShipment>
+							<code>KIBO_100505</code>
+							<status>SHIPPED</status>
+							<items>
+								<orderItem>
+									<code>KIBO_100508</code>
+									<status>SHIPPED</status>
+									<trackings overwrite="true">
+										<orderTracking>
+											<code>100302_100505_100508_T</code>
+											<trackingNumber>999999999999</trackingNumber>
+											<carrierName>FedEx</carrierName>
+											<carrierURL>https://www.fedex.com/apps/fedextrack/?tracknumbers=999999999999</carrierURL>
+										</orderTracking>
+									</trackings>
+								</orderItem>
+							</items>
+							<trackings overwrite="true">
+								<orderTracking>
+									<code>100302_100505_T</code>
+									<trackingNumber>999999999999</trackingNumber>
+									<carrierName>FedEx</carrierName>
+									<carrierURL>https://www.fedex.com/apps/fedextrack/?tracknumbers=999999999999</carrierURL>
+								</orderTracking>
+							</trackings>
+						</orderShipment>
+						<orderShipment>
+							<code>KIBO_100506</code>
+							<status>BACKORDERED</status>
+							<items>
+								<orderItem>
+									<code>KIBO_100509</code>
+									<status>BACKORDERED</status>
+								</orderItem>
+							</items>
+						</orderShipment>
+					</shipments>
+					<trackings>
+						<orderTracking>
+							<code>100302_T</code>
+							<trackingNumber>999999999999</trackingNumber>
+							<carrierName>FedEx</carrierName>
+							<carrierURL>https://www.fedex.com/apps/fedextrack/?tracknumbers=999999999999</carrierURL>
+						</orderTracking>
+					</trackings>
+				</order>
+			</orders>
+		</command>
+	</import>
+</marketlive>

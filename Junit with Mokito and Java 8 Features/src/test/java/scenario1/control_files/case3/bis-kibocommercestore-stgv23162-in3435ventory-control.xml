@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<batchIntegrationRequest xmlns="http://batchIntegrationRequest.bis.jbi.marketlive.com">
+  <requestId>InventoryImport</requestId>
+  <comment>Inventory Import</comment>
+  <merchant>
+    <code>kibocommercestore</code>
+    <site>
+      <code>kibocommercesstore</code>
+      <environment>stgv162</environment>
+      <integrationWebService>
+        <url>http://localhost:8802/IntegrationWS/IntegrationWSService</url>
+        <commandFiles>
+          <file>
+            <name>inventory.xml</name>
+            <seqNum>1</seqNum>
+            <encryptionRequested>false</encryptionRequested>
+            <inputXSLTFileName/>
+            <outputXSLTFileName/>
+          </file>
+        </commandFiles>
+      </integrationWebService>
+      <fileEncryption>
+        <publicKeyFile>test-pubring.pgp</publicKeyFile>
+        <outputFileExtension>pgp</outputFileExtension>
+        <asciiFormatEncoding>true</asciiFormatEncoding>
+      </fileEncryption>
+      <emailNotification>
+        <enabled>true</enabled>
+        <to>kiboInventoryNotify@kibocommerce.com</to>
+        <cc>kiboInventoryCC@kibocommerce.com</cc>
+        <bcc>kiboInventoryBCC@kibocommerce.com</bcc>
+      </emailNotification>
+    </site>
+  </merchant>
+</batchIntegrationRequest>
